@@ -48,16 +48,23 @@ echo "<br>";
 //teksti kärpimine - выборка текста
 $tekst2 = '        Põhitoetus võetakse ära 11.11 kui võilgneused ei ole parandatud.';
 
-echo trim($tekst2, "");
+echo trim($tekst2, "P, ");
 echo "<br>";
 echo ltrim($tekst2);
 echo "<br>";
 echo rtrim($tekst2);
 echo "<br>";
-// tekst kui massiv
-$tekst3 = 'All thinking men are atheists';
-echo $tekst3[0]; 				//A
+// tekst kui massiiv
+$tekst3 = 'Taiendav info opilasele kohta';
+/*echo $tekst3[0]; 				//T
 echo '<br>';
-echo $tekst3[4]; 				//t
+echo $tekst3[5];*/ //n
 
+echo "1.täht - ".$tekst3[0];
+echo "<br>";
+
+//kolmas sõna
+$sona = str_word_count($tekst3, 1);
+print_r($sona);
+echo "Kolmas sõna - ".$sona[2];
 
