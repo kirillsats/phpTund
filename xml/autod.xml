@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<autod>
+    <auto>
+        <mark>BMW</mark>
+        <autonumber>007KIR</autonumber>
+        <omanik>Kirill</omanik>
+        <v_aasta>2007</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Audi</mark>
+        <autonumber>001VER</autonumber>
+        <omanik>Bogdan</omanik>
+        <v_aasta>2020</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Mazda</mark>
+        <autonumber>314ZDA</autonumber>
+        <omanik>Seva</omanik>
+        <v_aasta>2011</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Ford</mark>
+        <autonumber>827kol</autonumber>
+        <omanik>Gleb</omanik>
+        <v_aasta>1999</v_aasta>
+    </auto>
+
+    <auto>
+        <mark>Toyota</mark>
+        <autonumber>123lol</autonumber>
+        <omanik>Martin</omanik>
+        <v_aasta>2000</v_aasta>
+    </auto>
+</autod>

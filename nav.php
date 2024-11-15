@@ -15,5 +15,11 @@
         <li>
             <a href="?leht=massiivid.php">Massiivid</a>
         </li>
+        <li>
+            <a href="xml/autodXMLFailist.php" target="_blank">XML autod</a>
+        </li>
+        <li>
+            <a href="xml/inimXMLfailist.php" target="_blank">TARpv23</a>
+        </li>
     </ul>
 </nav>
