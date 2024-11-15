@@ -20,6 +20,21 @@ function otsingPerekonnanimiJargi($paring)
     }
     return $paringVastus;
 }
+$opilased = simplexml_load_file("TARpv23.xml");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["Nimi"]) && isset($_POST["Perekonnanimi"]) && isset($_POST["Silmad"])) {
+    // Добавление нового студента в XML файл
+    $uusOpilane = $opilased->addChild("opilane");
+
+    // Добавление данных о студенте
+    $uusOpilane->addChild("Nimi", $_POST["Nimi"]);
+    $uusOpilane->addChild("Perekonnanimi", $_POST["Perekonnanimi"]);
+    $uusOpilane->addChild("Silmad", $_POST["Silmad"]);
+    $uusOpilane->addChild("Veebisait", $_POST["Veebisait"]);
+
+    // Сохранение изменений в XML файл
+    $opilased->asXML('TARpv23.xml');
+}
 
 // Функция для получения данных о студенте по имени
 function getStudentDetails($nimi) {
@@ -61,6 +76,7 @@ if (!empty($_POST['otsing'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
@@ -78,6 +94,24 @@ if (!empty($_POST['otsing'])) {
     </script>
 </head>
 <body>
+<h2>Lisa uus õpilane</h2>
+
+<!-- Форма для добавления студента -->
+<form method="post" action="">
+    <label for="Nimi">Nimi:</label>
+    <input type="text" id="Nimi" name="Nimi" required><br><br>
+
+    <label for="Perekonnanimi">Perekonnanimi:</label>
+    <input type="text" id="Perekonnanimi" name="Perekonnanimi" required><br><br>
+
+    <label for="Silmad">Silmad:</label>
+    <input type="text" id="Silmad" name="Silmad" required><br><br>
+
+    <label for="Veebisait">Veebisait:</label>
+    <input type="text" id="Veebisait" name="Veebisait" required><br><br>
+
+    <input type="submit" value="Lisa õpilane">
+</form>
 <h2>TARpv23 rühm</h2>
 
 <form method="post" action="?">
